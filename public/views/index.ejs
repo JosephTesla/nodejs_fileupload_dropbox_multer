@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fileuploading into dropbox</title>
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src="/assets/lib/jquery/jquery-3.3.1.js"></script>
+    <script src="/assets/lib/jquery/jquery-3.3.1.min.js"></script>
+    <script src="/assets/lib/dropbox_sdk/Dropbox-sdk.js"></script>
+    <script src="/assets/lib/dropbox_sdk/Dropbox-sdk.min.js"></script>
+    <script src="/assets/lib/dropbox_sdk/DropboxTeam-sdk.js"></script>
+    <script src="/assets/lib/dropbox_sdk/DropboxTeam-sdk.min.js"></script>
+
+</head>
+<body>
+    <div class="box">
+        <h1 class="header">Dropbox Fileupload</h1>
+        <hr class="horizontal-line">
+        <p class="ptbn"><strong class="red">*</strong>Access Token is only needed for dropbox uploading...</p>
+        <p class="ptbn"><strong class="red">*</strong>Dropbox file are not saving into mongodb (coming soon)...</p>
+        <p class="access-token"><strong>Token: </strong><< Generate from dropbox app console >>></p>
+        <div class="pp-auth">
+            <div class="picture">
+                <img src="" id="photo" class="photo">
+            </div>
+        </div>
+        <form class="form-control" enctype="multipart/form-data">
+            <input type="text" class="input-form" name="accesstoken" id="token" placeholder="Access token">
+            <input type="text" class="input-form" name="caption" id="caption" placeholder="Photo caption">
+            <input type="file" class="input-form" name="file" onchange="previewPhoto()" id="file">
+            <button type="submit" class="upload-btn" id="upload-btn">Upload</button>
+            <button type="submit" class="upload-btn" id="dropbox-btn">Dropbox Upload</button>
+        </form>
+        <div class="photo-list">
+            <% for(var i = 0; i < photos.length; i++){ %>
+                <div class="img-container">
+                    <img src="<%= photos[i].src %>" alt="" class="imgs">
+                    <span class="number"><%= (i+1) + ' \\ ' + photos.length %></span>
+                    <div class="caption"><%= photos[i].caption %></div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/dropbox.js"></script>
+</body>
+</html>
