@@ -12,7 +12,7 @@ To run this application you must install nodejs and mongodb in your computer.
 
 **Mongodb running**
 ```
-sudo service start mongodb
+sudo service mongod start
 ```
 
 **Server running**
