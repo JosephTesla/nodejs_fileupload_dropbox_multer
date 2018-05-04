@@ -135,6 +135,11 @@ Now create an app and generate the access token. Some screenshot might help you.
 
 After generating the **Access Token** copy it and paste it into **Access Token** then Select a **file** and click on the **Dropbox Upload** button. Then you will see a success message and check dropbox app folder. The fill will be uploaded.
 
+**Step 5: **
+
+In the **REDIRECT URIs** add this link, `http://localhost:3000/`
+![Dropbox Project URI](https://dl.dropbox.com/s/aplxg4orozm5ygo/redirectUri.png?dl=0)
+
 ## Here is a demo
 
 **Upload file**
