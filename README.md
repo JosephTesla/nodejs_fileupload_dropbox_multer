@@ -1,7 +1,5 @@
 Uploading File Using Multer with Nodejs and Jquery
 =========
-Uploading File into Dropbox with Nodejs and Jquery
-=========
 
 ### Description:
 This program will show you how to upload file into local storage and dropbox using nodejs and jquery.
@@ -52,7 +50,7 @@ $('#upload-btn').click(function(){
     var formData = new FormData();
     formData.append('file', inputFile, inputFile.name);
     formData.append('caption', $('#caption').val());
-    
+
     $.ajax({
         type: 'POST',
         url: '/upload',
@@ -96,7 +94,7 @@ module.exports.fileUploadMulter = function(req, res, next){
 
             photo.save(function(err, data){
                 if(err) throw err;
-                res.json(data); 
+                res.json(data);
             });
         }
     });
@@ -109,7 +107,7 @@ var data = {caption: req.body.caption, src: src};
   var photo = new Photo(data);
   photo.save(function(err, data){
     if(err) throw err;
-    res.json(data); 
+    res.json(data);
   });
 ```
 
@@ -166,9 +164,9 @@ $('#dropbox-btn').click(function(){
     dbx.filesUpload({ path: '/' + file.name, contents: file }).then(function (response) {
         console.log(response);
         alert('Successfully uploaded!');
-        
+
         // getSrc(db.id);
-        
+
     }).catch(function (error) {
         alert(error);
         console.error(error);
