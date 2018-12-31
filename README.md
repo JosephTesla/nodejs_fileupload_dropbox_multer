@@ -1,6 +1,8 @@
 Uploading File Using Multer with Nodejs and Jquery
 =========
 
+## Updated version of this repository can be found on this link [New Link](https://github.com/ansarker/nodejs_upload_file)
+
 ### Description:
 This program will show you how to upload file into local storage and dropbox using nodejs and jquery.
 
@@ -179,6 +181,3 @@ This line of code below, here the path is root of your app folder. To upload int
 ```
  dbx.filesUpload({ path: '/' + file.name, contents: file }).then(function (response) {
 ```
-**Nodejs**
-
-No nodejs code for dropbox now. **Coming soon...**
